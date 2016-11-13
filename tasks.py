@@ -16,8 +16,8 @@ class Task:
 
 	def __init__(self, id):
 		self.id = id
-			
-	def print(self):
+
+	def display(self):
 		print('{0:<10}{1:<10}{2:<10}{3:<10}'.format(self.id, self.done, self.due.strftime("%d/%m/%y"), self.title))
 
 class Tasks:
@@ -32,9 +32,9 @@ class Tasks:
 		id = len(self.tasks)
 		self.tasks.append(Task(id))	
 		
-	def print(self):
+	def display(self):
 		for t in self.tasks:
-			t.print()
+			t.display()
 
 tasks = Tasks()
 
@@ -43,6 +43,6 @@ if args.add:
 	tasks.add()
 
 #print out all tasks
-tasks.print()
+tasks.display()
 
 	
