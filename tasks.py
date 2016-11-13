@@ -26,18 +26,12 @@ class Task:
 
 	def __init__(self, id, done = False, due = date.today().strftime("%d/%m/%y"), title = "untitled"):
 		self.id = id
-<<<<<<< HEAD
 		self.done = done
 		self.due = due 
 		self.title = title
 
 	def display(self):
 		print('{0:<10}{1:<10}{2:<10}{3:<10}'.format(self.id, self.done, self.due, self.title))
-=======
-
-	def display(self):
-		print('{0:<10}{1:<10}{2:<10}{3:<10}'.format(self.id, self.done, self.due.strftime("%d/%m/%y"), self.title))
->>>>>>> 13f0e7ac888685e8e13432d53ae297b514ce3f01
 
 class Tasks:
 	
@@ -47,7 +41,6 @@ class Tasks:
 #		id = len(self.tasks)
 #		self.tasks.append(Task(id)) 	
 
-<<<<<<< HEAD
 	def add(self, task=Task(0)):
 		self.tasks.append(task)	
 		return task
@@ -64,15 +57,6 @@ class Tasks:
 
 	def count(self):
 		return len(self.tasks)
-=======
-	def add(self):
-		id = len(self.tasks)
-		self.tasks.append(Task(id))	
-		
-	def display(self):
-		for t in self.tasks:
-			t.display()
->>>>>>> 13f0e7ac888685e8e13432d53ae297b514ce3f01
 
 tasklist = Tasks()
 
@@ -90,10 +74,6 @@ if args.add:
 	conn.commit()
 
 #print out all tasks
-<<<<<<< HEAD
 tasklist.display()
-=======
-tasks.display()
->>>>>>> 13f0e7ac888685e8e13432d53ae297b514ce3f01
 
 conn.close()	
