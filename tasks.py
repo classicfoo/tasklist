@@ -37,10 +37,6 @@ class Tasks:
 	
 	tasks = []
 
-#	def __init__(self):
-#		id = len(self.tasks)
-#		self.tasks.append(Task(id)) 	
-
 	def add(self, task=Task(0)):
 		self.tasks.append(task)	
 		return task
